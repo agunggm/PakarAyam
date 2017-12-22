@@ -1,11 +1,11 @@
 <?php
 $my['host']	= "localhost";
-$my['user']	= "";
+$my['user']	= "root";
 $my['pass']	= "";
 $my['dbs']	= "pakarayamdb";
 
-$koneksi	= mysql_connect($my['host'], 
-							$my['user'], 
+$koneksi	= mysql_connect($my['host'],
+							$my['user'],
 							$my['pass']);
 if (! $koneksi) {
   echo "Gagal koneksi boss..!";

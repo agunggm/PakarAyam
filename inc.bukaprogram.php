@@ -1,5 +1,14 @@
 <?php
-$page= $_REQUEST['page'];
+if (!isset($_REQUEST['page'])) {
+	if(file_exists ("utamakita.htm")) {
+		include "utamakita.htm";
+	}
+	else {
+		echo "FILE HALAMAN UTAMA KITA TIDAK ADA";
+	}
+}
+else{
+	$page= $_REQUEST['page'];
 if ($page=="dafsakit") {
 	if(file_exists ("PenyakitTampil.php")) {
 		include "PenyakitTampil.php";
@@ -72,12 +81,5 @@ elseif ($page=="infobk") {
 		echo "FILE HALAMAN UTAMA KITA TIDAK ADA";
 	}
 }
-elseif ($page=="") {
-	if(file_exists ("utamakita.htm")) {
-		include "utamakita.htm";
-	}
-	else {
-		echo "FILE HALAMAN UTAMA KITA TIDAK ADA";
-	}
 }
 ?>

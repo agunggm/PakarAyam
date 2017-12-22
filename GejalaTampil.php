@@ -1,4 +1,4 @@
-<?php 
+<?php
 include "librari/inc.koneksidb.php";
 
 $kdsakit = $_REQUEST['kdsakit'];
@@ -13,25 +13,26 @@ $sakit = $datap['nm_penyakit'];
 </head>
 <body>
 <table width="400" border="0" cellpadding="2" cellspacing="1" bgcolor="#22B5DD">
-  <tr> 
+  <tr>
     <td colspan="3"><b>GEJALA PENYAKIT : <?= strtoupper($sakit); ?></b></td>
   </tr>
-  <tr bgcolor="#DBEAF5"> 
+  <tr bgcolor="#DBEAF5">
     <td width="21" align="center"><b>No</b></td>
     <td width="47"><b>Kode</b></td>
     <td width="316" bgcolor="#DBEAF5"><b>Nama Gejala</b></td>
   </tr>
-  <?php 
+  <?php
 	$sqlg  = "SELECT gejala.* FROM gejala,relasi ";
 	$sqlg .= "WHERE gejala.kd_gejala=relasi.kd_gejala ";
 	$sqlg .= "AND  relasi.kd_penyakit='$kdsakit' ";
 	$sqlg .= "ORDER BY gejala.kd_gejala";
-	$qryg = mysql_query($sqlg, $koneksi) 
+	$qryg = mysql_query($sqlg, $koneksi)
 		 or die ("SQL Error".mysql_error());
+  $no= 0;
 	while ($datag=mysql_fetch_array($qryg)) {
 	$no++;
   ?>
-  <tr bgcolor="#FFFFFF"> 
+  <tr bgcolor="#FFFFFF">
     <td align="center"><?php echo $no; ?></td>
     <td><?php echo $datag['kd_gejala']; ?></td>
     <td><?php echo $datag['nm_gejala']; ?></td>
@@ -39,7 +40,7 @@ $sakit = $datap['nm_penyakit'];
   <?php
   }
   ?>
-  <tr> 
+  <tr>
     <td colspan="3" bgcolor="#DBEAF5">&nbsp;</td>
   </tr>
 </table>

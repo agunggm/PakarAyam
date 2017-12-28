@@ -15,16 +15,15 @@ elseif (trim($TxtPasswd)=="") {
 }
 
 $sql_cek = "SELECT * FROM pakar WHERE userID='$TxtUser'
-		    AND passID=PASSWORD('$TxtPasswd')";
+		    AND passID=md5('$TxtPasswd')";
 $qry_cek = mysql_query($sql_cek, $koneksi)
 		   or die ("Gagal Cek".mysql_error());
 $ada_cek = mysql_num_rows($qry_cek);
 if ($ada_cek >=1) {
 	$SES_USER=$TxtUser;
-	$_session['SES_USER']=$SES_USER;
+	$_SESSION['SES_USER']=$SES_USER;
 
 	header ("location: index.php");
-	exit;
 }
 else {
 	echo "USER DAN PASSWORD TIDAK SESUAI";

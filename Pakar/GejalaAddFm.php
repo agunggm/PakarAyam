@@ -16,12 +16,12 @@ include "../librari/inc.kodeauto.php";
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td>Kode</td>
-      <td><input name="TxtKode" type="text"  maxlength="4" size="6" value="<? echo kdauto("gejala","G"); ?>" disabled="disabled">
-	      <input name="TxtKodeH" type="hidden" value="<? echo kdauto("gejala","G"); ?>"></td>
+      <td><input name="TxtKode" type="text"  maxlength="4" size="6" value="<?php echo kdauto("gejala","G"); ?>" disabled="disabled">
+	      <input name="TxtKodeH" type="hidden" value="<?php echo kdauto("gejala","G"); ?>"></td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td width="77">Gejala</td>
-      <td width="361"><textarea name="TxtGejala" cols="35" rows="3"><?= $TxtGejala; ?></textarea></td>
+      <td width="361"><textarea name="TxtGejala" cols="35" rows="3"></textarea></td>
     </tr>
     <tr bgcolor="#FFFFFF"> 
       <td>&nbsp;</td>

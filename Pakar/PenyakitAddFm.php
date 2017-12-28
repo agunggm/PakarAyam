@@ -16,24 +16,24 @@ include "../librari/inc.kodeauto.php";
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>Kode</td>
-  <td><input name="TxtKode" type="text"  maxlength="4" size="6" value="<? echo kdauto("penyakit","P"); ?>" disabled="disabled">
-	  <input name="TxtKodeH" type="hidden" value="<? echo kdauto("penyakit","P"); ?>"></td>
+  <td><input name="TxtKode" type="text"  maxlength="4" size="6" value="<?php echo kdauto("penyakit","P"); ?>" disabled="disabled">
+	  <input name="TxtKodeH" type="hidden" value="<?php echo kdauto("penyakit","P"); ?>"></td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td width="77">Penyakit</td>
-  <td width="361"><input name="TxtPenyakit" type="text" value="<?= $TxtPenyakit; ?>" size="45" maxlength="100"></td>
+  <td width="361"><input name="TxtPenyakit" type="text" value="" size="45" maxlength="100"></td>
 </tr>
 <tr bgcolor="#FFFFFF">
   <td>Nama Latin </td>
-  <td><input name="TxtNmLatin" type="text" value="<?= $TxtNmLatin; ?>" size="45" maxlength="100"></td>
+  <td><input name="TxtNmLatin" type="text" value="" size="45" maxlength="100"></td>
 </tr>
 <tr bgcolor="#FFFFFF">
   <td>Definisi</td>
-  <td><textarea name="TxtDefinisi" cols="40" rows="4"><?= $TxtDefinisi; ?></textarea></td>
+  <td><textarea name="TxtDefinisi" cols="40" rows="4"></textarea></td>
 </tr>
 <tr bgcolor="#FFFFFF">
   <td>Solusi</td>
-  <td><textarea name="TxtSolusi" cols="40" rows="4"><?= $TxtSolusi; ?></textarea></td>
+  <td><textarea name="TxtSolusi" cols="40" rows="4"></textarea></td>
 </tr>
 <tr bgcolor="#FFFFFF"> 
   <td>&nbsp;</td>

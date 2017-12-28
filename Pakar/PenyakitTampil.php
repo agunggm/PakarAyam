@@ -22,6 +22,7 @@ include "../librari/inc.koneksidb.php";
 	$sql = "SELECT * FROM penyakit ORDER BY kd_penyakit";
 	$qry = mysql_query($sql, $koneksi) 
 		 or die ("SQL Error".mysql_error());
+  $no=0;
 	while ($data=mysql_fetch_array($qry)) {
 	$no++;
   ?>
@@ -30,8 +31,8 @@ include "../librari/inc.koneksidb.php";
     <td><?php echo $data['nm_penyakit']; ?></td>
     <td><?php echo $data['nm_latin']; ?></td>
     <td align="center"> 
-	  <a href="PenyakitEditFm.php?kdubah=<? echo $data['kd_penyakit']; ?>" target="_self">Ubah</a> 
-      | <a href="PenyakitHapus.php?kdhapus=<? echo $data['kd_penyakit']; ?>" target="_self">Hapus</a></td>
+	  <a href="PenyakitEditFm.php?kdubah=<?php echo $data['kd_penyakit']; ?>" target="_self">Ubah</a> 
+      | <a href="PenyakitHapus.php?kdhapus=<?php echo $data['kd_penyakit']; ?>" target="_self">Hapus</a></td>
   </tr>
   <?php
   }

@@ -31,6 +31,7 @@ $sakit = $datap['nm_penyakit'];
 	$sqlg .= "ORDER BY gejala.kd_gejala";
 	$qryg = mysql_query($sqlg, $koneksi) 
 		 or die ("SQL Error".mysql_error());
+     $no=0;
 	while ($datag=mysql_fetch_array($qryg)) {
 	$no++;
   ?>

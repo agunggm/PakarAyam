@@ -2,7 +2,6 @@
 include "inc.session.php"; 
 include "menu.php"; 
 include "../librari/inc.koneksidb.php";
-$kdsakit = $_REQUEST['kdsakit'];
 ?>
 <html>
 <head>

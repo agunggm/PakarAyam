@@ -18,6 +18,7 @@ include "../librari/inc.koneksidb.php";
     <td width="95" align="center"><b>Pilihan</b></td>
   </tr>
   <?php
+  $no=0;
 	$sql = "SELECT * FROM gejala ORDER BY kd_gejala";
 	$qry = mysql_query($sql, $koneksi)
 		 or die ("SQL Error".mysql_error());
